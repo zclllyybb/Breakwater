@@ -1,0 +1,68 @@
+JIRA_URL: https://jira.example.com
+JIRA_TOKEN: null
+GITHUB_TOKEN: null
+
+codex:
+  url: ws://127.0.0.1:17345
+  model: null
+  effort: null
+  workspace: ${PROJECT_ROOT}
+  sandbox: workspace-write
+  start_server: true
+
+proxy:
+  enabled: false
+  http: null
+  https: null
+  all: null
+  no_proxy: 127.0.0.1,localhost
+
+queue:
+  concurrency: 5
+
+lark:
+  chat_id: null
+  app_id: null
+  app_secret: null
+  cli_config: ~/.lark-cli/config.json
+
+jira:
+  enabled: true
+  projects: [OPS]
+  record_new_issues: false
+  auto_analyze_new_issues: false
+  auto_analyze_projects: []
+  status_summary_enabled: false
+  status_summary_projects: []
+  status_summary_target_statuses: [Done]
+  bot_mention_keys: []
+  skill_dir: skills/jira-issue
+  token: null
+
+github:
+  enabled: false
+  repositories: []
+  auto_analyze: false
+  poll_interval_seconds: 300
+  token: null
+  api_url: https://api.github.com
+
+develop:
+  enabled: true
+  skill_dir: skills/breakwater-develop
+
+prompt_variables:
+  DEVELOP_DEFAULT_REPOSITORY: ${CODEX_WORKSPACE}
+
+web:
+  enabled: true
+  host: 127.0.0.1
+  port: 8765
+
+admin_web:
+  enabled: false
+  host: 127.0.0.1
+  port: 8766
+  password_hash: null
+  session_secret: null
+  jira_base_url: https://jira.example.com
