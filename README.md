@@ -1,3 +1,5 @@
+
+
 # Breakwater
 
 Breakwater 是一个本地 on-call agent 服务。它的含义来自“防波堤”：利用大模型能力和历史数据，把绝大多数线上问题在最早期拦住，让研发只需要处理真正需要判断力的部分。
@@ -50,10 +52,11 @@ JIRA_URL: https://jira.example.com
 
 codex:
   url: ws://127.0.0.1:17345
-  model: gpt-5.5
-  effort: xhigh
+  model: null
+  effort: null
   workspace: ${PROJECT_ROOT}
-  sandbox: danger-full-access
+  sandbox: workspace-write
+  start_server: true
 
 proxy:
   enabled: true
